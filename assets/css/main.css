@@ -147,18 +147,45 @@ main {
   width: 100%;
 }
 
+.grilla-2{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+  width: 90%;
+}
+
 .item{
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
+.item-2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .item-botones img{
   margin-bottom: 2px;
 }
 
+.item-botones-2{
+  width: 100%;
+  margin: 5px 0 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, .25);
+  border-radius: 6px;
+}
+
 .btn-up,
-.btn-down {
+.btn-down,
+.btn-left,
+.btn-right {
   border: 2px solid black;
   width: 47px;
   height: 45px;
@@ -196,6 +223,26 @@ main {
   filter: drop-shadow(0 2px 2px rgba(255, 255, 255, 0.3));
 }
 
+.btn-left::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-right: 12px solid #DDDDDD;
+  filter: drop-shadow(2px 0 2px rgba(255, 255, 255, 0.3));
+}
+
+.btn-right::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 12px solid #DDDDDD;
+  filter: drop-shadow(-2px 0 2px rgba(255, 255, 255, 0.3));
+}
+
 .item input{
   border: 5px solid #474849;
   border-radius: 10px;
@@ -207,6 +254,19 @@ main {
   font-weight: 900;
   font-size: 40px;
   width: 75%;
+}
+
+.item-2 input{
+  border: 5px solid #474849;
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-size: 20px;
+  margin-right: 2px;
+  text-align: center;
+  font-family: 'tektur', sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+  width: 100%;
 }
 
 /* Contenedor para valor y contador */
@@ -262,4 +322,16 @@ main {
 #total {
   font-weight: bold;
   font-size: 90px;
+}
+
+#valor {
+  font-weight: bold;
+  font-size: 25px;
+  color: #000;
+}
+
+.valor {
+  font-weight: bold;
+  font-size: 25px;
+  color: #000;
 }
