@@ -87,6 +87,35 @@
     <button class="btn btn-primary mt-2" id="btn-cancelar">Cancelar</button>
     <button class="btn btn-primary mt-2" id="btn-cargar">Comprar</button>
   </div>
+
+  <!-- popup -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close" id="popup-close"><img src="assets/img/btn-close.svg"></span>
+      <h2>Pago con tarjeta <br> Crédito / Débito</h2>
+      <div class="resume">
+        <div class="resume-item">
+          <span class="text-2">Está comprando:</span>
+          <span id="popup-nombre">1 ticket (s)</span>
+        </div>
+        <div class="resume-item">
+          <span class="text-2">Total a pagar:</span>
+          <span id="popup-tarjeta">$100.000</span>
+        </div>
+      </div>
+      <div class="elegir-pago">
+        <div class="elegir-pago-item">
+          <span class="text-2">Inserta y retira
+            tu tarjeta</span>
+          <img src="assets/img/icon-insertar-tarjeta.png">
+        </div>
+        <div class="elegir-pago-item">
+          <span class="text-2">o acerque su tarjeta al sensor</span>
+          <img src="assets/img/icon-acercar-tarjeta.png">
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 <script src="assets/js/main-2.js"></script>
 
