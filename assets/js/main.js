@@ -5,6 +5,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Obtener todos los items de la grilla
     const items = document.querySelectorAll('.item');
     
+    // Función para calcular y actualizar el total
+    function actualizarTotal() {
+        let total = 0;
+        Object.keys(contadores).forEach(index => {
+            const valorOriginal = parseInt(contadores[index].valorOriginal.replace(/\./g, ''));
+            const contador = contadores[index].contador;
+            total += valorOriginal * contador;
+        });
+        
+        // Formatear el total con puntos de miles
+        const totalFormateado = total.toLocaleString('es-CL');
+        document.getElementById('total').textContent = totalFormateado;
+    }
+    
     items.forEach((item, index) => {
         const input = item.querySelector('input');
         const btnUp = item.querySelector('.btn-up');
@@ -37,6 +51,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 <span class="valor-principal">${contadores[index].valorOriginal}</span>
                 <span class="contador-text">x${contadores[index].contador}</span>
             `;
+            
+            // Actualizar el total
+            actualizarTotal();
         });
         
         // Event listener para botón hacia abajo
@@ -55,7 +72,13 @@ document.addEventListener('DOMContentLoaded', function() {
                         <span class="contador-text">x${contadores[index].contador}</span>
                     `;
                 }
+                
+                // Actualizar el total
+                actualizarTotal();
             }
         });
     });
+    
+    // Inicializar el total en 0
+    actualizarTotal();
 });
