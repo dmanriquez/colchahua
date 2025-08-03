@@ -86,6 +86,13 @@
   <div>
     <button class="btn btn-primary mt-2" id="btn-cancelar">Cancelar</button>
     <button class="btn btn-primary mt-2" id="btn-cargar">Comprar</button>
+    <!-- parametros para mostrar popups
+      imprimiendo,
+      error, 
+      datosIncorrectos, 
+      soloMensaje
+    -->
+    <button class="btn btn-primary mt-2" onclick="PopupManager.mostrarPredefinido('error')">popups</button>
   </div>
 
   <!-- popup -->
@@ -116,7 +123,13 @@
       </div>
     </div>
   </div>
+  
+  <!-- Popup -->
+  <div class="message">
+    <div class="message-content"></div>
+  </div>
+
 </body>
-<script src="assets/js/main-2.js"></script>
+<script src="assets/js/main.js"></script>
 
 </html>
