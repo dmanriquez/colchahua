@@ -470,3 +470,31 @@ main {
   top: -50px;
   right: -30px;
 }
+
+.display-ingreso{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.display-ingreso-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  text-align: center;
+}
+
+.display-ingreso-item p{
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+  min-height: 75px;
+  margin: 0 0 20px 0;
+}
+
+.display-ingreso-item img{
+  width: 320px;
+}
